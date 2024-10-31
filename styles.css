@@ -1,7 +1,87 @@
+@font-face {
+    font-family: 'Norse';
+    src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    height: 100vh;
 }
+
+.title-container {
+    height: 100%;
+    flex: 0 1 600px;
+}
+
+.title-container figure {
+    position: relative;
+    background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title-container .logo-container {
+    font-family: 'Norse', sans-serif;
+    font-size: 3rem;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.4em;
+}
+
+figure figcaption {
+    position: absolute;
+    bottom: 1em;
+    color: #d8d8d8;
+    text-align: center;
+    width: 100%;
+}
+
+figure figcaption a {
+    color: inherit;
+}
+
+figure figcaption a:hover {
+    text-decoration: none;
+}
+
+.title-container .logo-container > img, .title-container .logo-container .title {
+    display: inline-block;
+    height: 7rem;
+    vertical-align: middle;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main-content .form-description {
+    font-weight: bold;
+    font-size: 2rem;
+    width: 74%;
+    margin: auto;
+    line-height: 1.5;
+}
+
+
+.title-container figure, .title-container img {
+    height: 100%;
+}
+

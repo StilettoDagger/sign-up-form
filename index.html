@@ -18,15 +18,117 @@
 					<img src="assets/odin-lined.png" alt="Odin logo" class="logo" />
 					<h1 class="title">odin</h1>
 				</div>
-                <figcaption>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></figcaption>
+				<figcaption>
+					Photo by
+					<a href="https://unsplash.com/@haliewestphoto">Halie West</a> on
+					<a
+						href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA"
+						>Unsplash</a
+					>
+				</figcaption>
 			</figure>
 		</div>
 		<div class="main-content">
-			<p class="form-description">
-				This is not a real online service! You know you need something like this
-				in your life to help you realize your deepest dreams. Sign up
-				<em>now</em> to get started
-			</p>
+			<div class="form-description">
+				<p>
+					This is not a real online service! You know you need something like
+					this in your life to help you realize your deepest dreams. Sign up
+					<em>now</em> to get started
+				</p>
+				<p>You <em>know</em> you want to.</p>
+			</div>
+			<form action="post">
+				<div class="form-wrapper">
+					<h2 class="form-title">Let's do this!</h2>
+					<div class="form-body">
+						<div class="form-component">
+							<input
+								type="text"
+								name="fname"
+								id="fname"
+								required
+								aria-required="true"
+								placeholder=""
+								maxlength="20"
+								pattern="[a-zA-Z\-]+" />
+							<label for="fname">first name</label>
+							<span
+								class="error-msg"
+								aria-describedby="fname"
+								aria-live="polite"></span>
+						</div>
+						<div class="form-component">
+							<input
+								type="text"
+								name="lname"
+								id="lname"
+								aria-required="true"
+								required
+								placeholder="" />
+							<label for="lname">last name</label>
+							<span
+								class="error-msg"
+								aria-describedby="lname"
+								aria-live="polite"></span>
+						</div>
+						<div class="form-component">
+							<input
+								type="email"
+								name="mail"
+								id="mail"
+								required
+								aria-required="true"
+								placeholder="" />
+							<label for="mail">email</label>
+							<span
+								class="error-msg"
+								aria-describedby="mail"
+								aria-live="polite"></span>
+						</div>
+						<div class="form-component">
+							<input
+								type="tel"
+								name="phone"
+								id="phone"
+								required
+								aria-required="true"
+								placeholder=""
+								pattern="(\d+-?\d+)+" />
+							<label for="phone">phone number</label>
+							<span
+								class="error-msg"
+								aria-describedby="phone"
+								aria-live="polite"></span>
+						</div>
+						<div class="form-component">
+							<input
+								type="password"
+								name="pwd"
+								id="pwd"
+								required
+								aria-required="true"
+								placeholder=""
+								minlength="8" />
+							<label for="pwd">password</label>
+							<span class="error-msg" aria-describedby="polite"></span>
+						</div>
+						<div class="form-component">
+							<input
+								type="password"
+								name="pwd-confirm"
+								id="pwd-confirm"
+								required
+								aria-required="true"
+								placeholder=""
+								minlength="8" />
+							<label for="pwd-confirm">confirm password</label>
+							<span class="error-msg" aria-describedby="polite"></span>
+						</div>
+					</div>
+				</div>
+                <button type="submit">Create Account</button>
+			</form>
+            <p class="login">Already have an account? <a href="#">Log in</a> </p>
 		</div>
 	</body>
 </html>

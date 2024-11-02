@@ -19,6 +19,10 @@ body {
     height: 100vh;
 }
 
+html {
+    font-size: clamp(12px, 1vw, 18px);
+}
+
 .title-container {
     height: 100%;
     flex: 0 1 600px;
@@ -80,9 +84,9 @@ figure figcaption a:hover {
 
 .main-content .form-description {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     max-width: 54ch;
-    padding-left: 3.5rem;
+    padding: 0 3.5rem;
     line-height: 1.5;
 }
 
@@ -91,7 +95,7 @@ figure figcaption a:hover {
 }
 
 .form-wrapper {
-    padding: 2em 0 2em 3.5rem;
+    padding: 2em 3.5rem;
     background-color: #fafbfc;
     box-shadow: 5px 5px 10px gray;
 }
@@ -124,8 +128,8 @@ figure figcaption a:hover {
 }
 
 .form-component input {
-    width: 20rem;
     padding: 0.5em;
+    width: clamp(200px, 80%, 400px);
     font: inherit;
     font-size: 0.9rem;
     border: 1px solid #ccc;
@@ -179,7 +183,7 @@ button[type="submit"] {
     padding: 0.5em 1.5em;
     border: none;
     box-shadow: 1px 1px 5px gray;
-    margin: 1em 0 0 3.5rem;
+    margin: 2em 0 0 3.5rem;
     font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
@@ -199,4 +203,81 @@ p.login a {
     color: #596D48;
     font-weight: 700;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1300px) {
+    
+    .form-body {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .form-component {
+        margin-top: 1em;
+        flex: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+
+    .title-container, .title-container figure {
+        height: 100dvh;
+    }
+
+    html {
+        font-size: 16px;
+    }
+
+    .main-content {
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .main-content .form-description {
+        padding: 2rem 3.5rem;
+        max-width: 100%;;
+    }
+
+    .form-component {
+        width: 100%;
+        align-items: center;
+    }
+
+    .form-component input {
+        width: clamp(100px, 100%, 250px);
+        font-size: 1rem;
+    }
+
+    .form-component label {
+        font-size: 1rem;
+    }
+
+    form, .form-wrapper {
+        width: 100%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button[type="submit"]{
+        margin: 0;
+        margin-top: 2em;
+        width: fit-content;
+    }
+
+    p.login {
+        margin: 0;
+    }
+
 }
